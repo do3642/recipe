@@ -21,9 +21,9 @@
 		<label for="client-name">성함 :</label>
 		<input id="client-name"type="text" name="clientname"><br>
 		<label for="tel">연락처 :</label>
-		<input id="tel"type="text" name="clientname"><br>
+		<input id="tel"type="text" name="tel"><br>
 		<label for="address">주소 :</label>
-		<input id="address" type="text" name="clientname"><br>
+		<input id="address" type="text" name="address"><br>
 		
 		<input type="submit" value="가입">
 
