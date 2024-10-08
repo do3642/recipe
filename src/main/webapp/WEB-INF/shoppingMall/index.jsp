@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="./layout/header.jsp" %>
 
-	<h1>Index 페이지</h1>
+	<h1>shoppingMall index 페이지</h1>
+	<a href="/auth/insertuser">회원가입</a>
 
 <%@ include file="./layout/footer.jsp" %>
