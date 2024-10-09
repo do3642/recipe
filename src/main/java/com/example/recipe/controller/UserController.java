@@ -1,7 +1,10 @@
 package com.example.recipe.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -33,7 +36,34 @@ public class UserController {
 			// 중복값이 있을때 리턴시키는곳
 			return "";
 		}
+	}
+	
+	//로그인 페이지 이동
+	@GetMapping("/auth/login")
+	public String loginPage () {
+		return "user/login";
+	}
+	
+	//로그인 기능
+	@PostMapping("/auth/login")
+	public String login(Client client,HttpSession session) {
 		
+		if(userService.loginCheck(client,session)) {
+			
+			return "redirect:/";
+		}else {
+			return null;
+		}
 		
 	}
+	
+	//로그아웃
+	@GetMapping("/auth/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		// 보는 페이지에서 리턴해주고싶음
+		return "redirect:/";
+	}
+	
+	
 }

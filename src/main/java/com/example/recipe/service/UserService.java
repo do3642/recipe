@@ -1,7 +1,10 @@
 package com.example.recipe.service;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.example.recipe.domain.Client;
 import com.example.recipe.domain.RoleType;
@@ -23,6 +26,7 @@ public class UserService {
 	}
 	
 	
+	//중복검사
 	public boolean idCheck(Client client) {
 		
 		Client idCheck = userRepository.findByUsername(client.getUsername());
@@ -35,5 +39,24 @@ public class UserService {
 		}
 		
 	}
+	
+	
+	//로그인정보 확인, 세션에 로그인정보 저장, 에러메세지 반환
+	public boolean loginCheck(Client loginData,HttpSession session) {
+		
+		Client client = userRepository.findByUsername(loginData.getUsername());
+		
+		if(client != null && client.getUsername().equals(loginData.getUsername()) && client.getPassword().equals(loginData.getPassword())) {
+			session.setAttribute("principal", client);
+			
+			return true;
+		} else {
+			return false;
+		}
+			
+		
+		
+	}
+	
 	
 }
