@@ -14,6 +14,7 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	
+	//회원가입 서비스 - 권한세팅 후 DB저장
 	public void insertUser(Client client) {
 		
 		client.setRole(RoleType.USER);
@@ -21,11 +22,13 @@ public class UserService {
 		
 	}
 	
+	
 	public boolean idCheck(Client client) {
 		
 		Client idCheck = userRepository.findByUsername(client.getUsername());
+	// DB에 입력된 username이 없으면 null로 반환, 있으면 객체지만 else니깐 false로 리턴
 		
-		if(idCheck.getUsername() == null) {
+		if(idCheck == null) {
 			return true;
 		}else {
 			return false;

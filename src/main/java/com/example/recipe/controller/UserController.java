@@ -15,20 +15,25 @@ public class UserController {
 	private UserService userService;
 	
 	
+	//회원가입 페이지 이동
 	@GetMapping("/auth/insertuser")
 	public String insertUser() {
 		return "user/insertuser";
 	}
-
+	
+	
+	//회원가입 POST요청
 	@PostMapping("/auth/insertuser")
 	public String createUser(Client client) {
 		
 		if(userService.idCheck(client)) {
-			
+			userService.insertUser(client);
+			return "redirect:/";
+		}else {
+			// 중복값이 있을때 리턴시키는곳
+			return "";
 		}
-		userService.insertUser(client);
 		
-		return "redirect:/";
 		
 	}
 }
