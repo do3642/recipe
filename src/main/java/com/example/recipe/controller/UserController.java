@@ -1,12 +1,12 @@
-package com.example.shoppingMall.controller;
+package com.example.recipe.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.shoppingMall.domain.Client;
-import com.example.shoppingMall.service.UserService;
+import com.example.recipe.domain.Client;
+import com.example.recipe.service.UserService;
 
 @Controller
 public class UserController {

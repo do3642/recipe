@@ -1,4 +1,4 @@
-package com.example.shoppingMall.domain;
+package com.example.recipe.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

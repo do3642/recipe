@@ -1,11 +1,11 @@
-package com.example.shoppingMall.service;
+package com.example.recipe.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.shoppingMall.domain.Client;
-import com.example.shoppingMall.domain.RoleType;
-import com.example.shoppingMall.repository.UserRepository;
+import com.example.recipe.domain.Client;
+import com.example.recipe.domain.RoleType;
+import com.example.recipe.repository.UserRepository;
 
 @Service
 public class UserService {

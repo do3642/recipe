@@ -1,9 +1,9 @@
-package com.example.shoppingMall.repository;
+package com.example.recipe.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.shoppingMall.domain.Client;
+import com.example.recipe.domain.Client;
 
 
 
