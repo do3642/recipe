@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+
+section .items-board{
+	display: grid;
+	grid-template-columns: repeat(5,minmax(100px, 1fr));
+	 grid-auto-rows: 300px;
+}
