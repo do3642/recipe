@@ -5,21 +5,3 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-</head>
-<body>
-	<nav>
-		<p>네비바 영역 </p>
-		<a href="/">홈</a>
-		<c:if test="${sessionScope.principal == null }">
-		<a href="/auth/insertuser">회원가입</a>
-		<a href="/auth/login">로그인</a>
-		</c:if>
-		<c:if test="${sessionScope.principal != null }">
-		<a href="/auth/insertuser">내정보</a>
-		<a href="/auth/logout">로그아웃</a>
-		<a href="/post">게시물 작성</a>
-		</c:if>
-	</nav>
-	<h1></h1>

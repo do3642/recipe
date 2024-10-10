@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
 
    <footer>
-   	footer 영역
+   	<p>copyright 2024 요리연구소 all rights reserved</p>
    </footer>
+
+  </main>
  </body>
  </html>

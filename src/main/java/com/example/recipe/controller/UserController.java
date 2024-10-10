@@ -52,6 +52,7 @@ public class UserController {
 			
 			return "redirect:/";
 		}else {
+			// 보는 페이지에서 리턴해주고싶음
 			return null;
 		}
 		
@@ -61,7 +62,7 @@ public class UserController {
 	@GetMapping("/auth/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		// 보는 페이지에서 리턴해주고싶음
+	
 		return "redirect:/";
 	}
 	
