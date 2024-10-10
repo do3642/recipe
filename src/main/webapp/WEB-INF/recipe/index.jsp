@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="./layout/header.jsp" %>
-<title>레시피 인덱스 페이지</title>
+<title>요리연구소</title>
 
 
 <%@ include file="./layout/nav.jsp" %>

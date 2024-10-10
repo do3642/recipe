@@ -1,17 +1,20 @@
 const userObject = {
 	init:function(){
 		//내정보 수정 클릭 시 클릭제어박스 및 알람 버튼 활성화
+		const alertBox = $(".alert-box");
+		const noneClickBox=$(".none-click");
+		const deleteBox = $(".delete-box");
 		$(".change-btn").on("click",(e)=>{
 			e.preventDefault();
-			$(".alert-box").slideDown();
-			$(".none-click").addClass("active");
+			$(alertBox).slideDown();
+			$(noneClickBox).addClass("active");
 		});
 		
 		//아니요 클릭 시 비활성화
 		$(".alert-button button").eq(1).on("click",(e)=>{
 			e.preventDefault();
-			$(".alert-box").slideUp();
-			$(".none-click").removeClass("active");
+			$(alertBox).slideUp();
+			$(noneClickBox).removeClass("active");
 		});
 		
 		//예 클릭시 서버에 수정요청
@@ -24,15 +27,15 @@ const userObject = {
 		//
 		$(".delete-btn").on("click",(e)=>{
 					e.preventDefault();
-					$(".delete-box").slideDown();
-					$(".none-click").addClass("active");
+					$(deleteBox).slideDown();
+					$(noneClickBox).addClass("active");
 				});
 				
 				//아니요 클릭 시 비활성화
 				$(".delete-button button").eq(1).on("click",(e)=>{
 					e.preventDefault();
-					$(".delete-box").slideUp();
-					$(".none-click").removeClass("active");
+					$(deleteBox).slideUp();
+					$(noneClickBox).removeClass("active");
 				});
 				
 				//예 클릭시 서버에 삭제요청

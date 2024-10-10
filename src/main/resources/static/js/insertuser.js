@@ -13,17 +13,17 @@ let isClientnameCheck=false;
 let isTelCheck=false;
 let isAddressCheck=false;
 
-
+const selectSpan = $("form span");
 //아이디 정규식
 $("#id").on("input",()=>{
 	
 	if(regexId.test($("#id").val())){
-		$("form span").eq(0).html("사용 가능한 아이디 입니다.");
-		$("form span").eq(0).css("color","green");
+		$(selectSpan).eq(0).html("사용 가능한 아이디 입니다.");
+		$(selectSpan).eq(0).css("color","green");
 		isIdCheck = true;
 	}else{
-		$("form span").eq(0).html("사용 불가능한 아이디 입니다.");
-		$("form span").eq(0).css("color","red");
+		$(selectSpan).eq(0).html("사용 불가능한 아이디 입니다.");
+		$(selectSpan).eq(0).css("color","red");
 		isIdCheck = false;
 	}
 	insertBtn();
@@ -34,12 +34,12 @@ $("#id").on("input",()=>{
 $("#pw").on("input",()=>{
 	
 	if(regexPw.test($("#pw").val())){
-		$("form span").eq(1).html("사용 가능한 비밀번호 입니다.");
-		$("form span").eq(1).css("color","green");
+		$(selectSpan).eq(1).html("사용 가능한 비밀번호 입니다.");
+		$(selectSpan).eq(1).css("color","green");
 		isPwcheck = true;
 	}else{
-		$("form span").eq(1).html("사용 불가능한 비밀번호 입니다.");
-		$("form span").eq(1).css("color","red");
+		$(selectSpan).eq(1).html("사용 불가능한 비밀번호 입니다.");
+		$(selectSpan).eq(1).css("color","red");
 		isPwcheck = false;
 	}
 
@@ -50,12 +50,12 @@ $("#pw").on("input",()=>{
 $("#nickname").on("input",()=>{
 	
 	if(regexNickname.test($("#nickname").val())){
-		$("form span").eq(2).html("사용 가능한 닉네임 입니다.");
-		$("form span").eq(2).css("color","green");
+		$(selectSpan).eq(2).html("사용 가능한 닉네임 입니다.");
+		$(selectSpan).eq(2).css("color","green");
 		isNicknameCheck = true
 	}else{
-		$("form span").eq(2).html("사용 불가능한 닉네임 입니다.");
-		$("form span").eq(2).css("color","red");
+		$(selectSpan).eq(2).html("사용 불가능한 닉네임 입니다.");
+		$(selectSpan).eq(2).css("color","red");
 		isNicknameCheck = false;
 	}
 	insertBtn();
