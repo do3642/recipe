@@ -41,7 +41,7 @@ public class UserController {
 			return "redirect:/";
 		}else {
 			// 중복값이 있을때 리턴시키는곳
-			return "";
+			return "user/insertuser";
 		}
 	}
 	
@@ -60,7 +60,8 @@ public class UserController {
 			return "redirect:/";
 		}else {
 			// 보는 페이지에서 리턴해주고싶음
-			return null;
+			// 값을 넣은채로 비번만 날라가게 하거나 알림창 띄우고 싶음
+			return "/user/login";
 		}
 		
 	}

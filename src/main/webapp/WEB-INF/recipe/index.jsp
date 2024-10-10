@@ -8,8 +8,10 @@
 <%@ include file="./layout/nav.jsp" %>
 
 
-
+	<section>
 	<h1>레시피 index 페이지</h1>
+	
+	</section>
 	
 
 <script src="/js/main.js"></script>

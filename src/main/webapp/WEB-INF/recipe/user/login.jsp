@@ -9,7 +9,7 @@
 
 	<section>
 		<article>
-			<h1>로그인</h1>
+			<h2>로그인</h2>
 			<form action="/auth/login" method="post">
 					<label for="id">아이디</label><br>
 				<input id="id"type="text" name="username"><br>

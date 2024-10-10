@@ -8,7 +8,7 @@
 
 	<section>
 			<article>
-				<h1>회원가입</h1>
+				<h2>회원가입</h2>
 					<form action="/auth/insertuser" method="post">
 						<label for="id">아이디</label><br>
 						<input id="id"type="text" name="username"><br>
