@@ -8,25 +8,23 @@
 <%@ include file="../layout/nav.jsp" %>
 
 	<section>
-		<article class="items-board">
-			<div>
-			게시글1	
-			</div>
-			<div>
-			게시글2
-			</div>
-			<div>
-			게시글3	
-			</div>
-			<div>
-			게시글4	
-			</div>
-			<div>
-			게시글5	
-			</div>
-			<div>
-			게시글6	
-			</div>
+		<article>
+		
+			   <form>
+			   		<div>
+			   			
+			   		</div>
+				    <div>
+				       <label for="title" class="form-label">Title</label><br>
+				       <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
+				    </div>
+				    <div>
+				       <label for="content" class="form-label">Content:</label><br>
+				       <textarea class="form-control" id="content" rows="10"></textarea>
+				    </div>
+				     <button id="btn-insert" type="submit" class="btn btn-primary">게시물 등록</button>
+			   </form>
+		
 		</article>
 	</section>
 	
