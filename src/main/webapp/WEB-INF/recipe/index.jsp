@@ -3,7 +3,7 @@
 
 <%@ include file="./layout/header.jsp" %>
 <title>레시피 인덱스 페이지</title>
-<link rel="stylesheet" href="/css/main.css">
+
 
 <%@ include file="./layout/nav.jsp" %>
 

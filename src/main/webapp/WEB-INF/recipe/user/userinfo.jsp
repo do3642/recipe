@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../layout/header.jsp" %>
 <title>요리연구소 회원정보</title>
-<link rel="stylesheet" href="/css/main.css">
+
 <link rel="stylesheet" href="/css/userinfo.css">
 
 <%@ include file="../layout/nav.jsp" %>

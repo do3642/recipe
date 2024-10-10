@@ -87,3 +87,8 @@ form button:hover{
 	left:0;top:0;
 	z-index:98;
 }
+
+.insert-btn{
+	text-align:center;
+	background-color:khaki;
+}
