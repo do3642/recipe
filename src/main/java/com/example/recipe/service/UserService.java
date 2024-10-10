@@ -53,10 +53,24 @@ public class UserService {
 		} else {
 			return false;
 		}
-			
+	}
+	
+	
+	public void updateUser(Client client,HttpSession session) {
+		Client existingUser = userRepository.findByUsername(client.getUsername());
+		System.out.println(client);
+		System.out.println(existingUser);
+		existingUser.setPassword(client.getPassword());
+		existingUser.setNickname(client.getNickname());
+		existingUser.setTel(client.getTel());
+		existingUser.setAddress(client.getAddress());
+		session.setAttribute("principal", existingUser);
+		
+		
+		
+		userRepository.save(existingUser);
 		
 		
 	}
-	
 	
 }

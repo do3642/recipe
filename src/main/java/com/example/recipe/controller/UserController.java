@@ -3,12 +3,17 @@ package com.example.recipe.controller;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.recipe.domain.Client;
+import com.example.recipe.domain.ResponseDTO;
 import com.example.recipe.service.UserService;
 
 @Controller
@@ -62,6 +67,16 @@ public class UserController {
 	@GetMapping("/auth/userinfo")
 	public String userInfo() {
 		return "user/userinfo";
+	}
+	
+	//내정보 업데이트
+	@PutMapping("/auth/update")
+	@ResponseBody
+	public ResponseDTO<?> updateUser(@RequestBody Client client,HttpSession session){
+		
+		System.out.println(client);
+		userService.updateUser(client,session);
+		return new ResponseDTO<>(HttpStatus.OK.value(), "수정 완료");
 	}
 	
 	
