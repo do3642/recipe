@@ -1,4 +1,5 @@
 $(".change-btn").on("click",(e)=>{
 	e.preventDefault();
-	console.log('11')
-})
+	$(".alert-box").slideDown();
+	$(".none-click").addClass("active");
+});

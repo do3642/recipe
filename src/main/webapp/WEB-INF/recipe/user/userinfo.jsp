@@ -34,5 +34,6 @@
 		</article>
 	</section>
 
+<div class="none-click"></div>
 <script src="/js/userinfo.js"></script>
 <%@ include file="../layout/footer.jsp" %>

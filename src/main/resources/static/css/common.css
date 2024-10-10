@@ -14,3 +14,10 @@ span,em,strong,a{display: inline-block;}
   font-size:16px;
   box-sizing:border-box;
 }
+
+
+test{
+  transform: translate(0,-50%);
+ 
+  
+}
