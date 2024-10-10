@@ -58,6 +58,15 @@ public class UserController {
 		
 	}
 	
+	//내정보 페이지 이동
+	@GetMapping("/auth/userinfo")
+	public String userInfo() {
+		return "user/userinfo";
+	}
+	
+	
+	
+	
 	//로그아웃
 	@GetMapping("/auth/logout")
 	public String logout(HttpSession session) {
