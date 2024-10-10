@@ -27,7 +27,7 @@
 		</c:if>
 		<c:if test="${sessionScope.principal != null }">
 			<div class="account">
-				<div class="user-name">???님 환영합니다.</div>
+				<div class="user-name">${sessionScope.principal.username}님 환영합니다.</div>
 				<div class="user-interface">
 					<a href="/auth/userinfo">내정보 |</a>
 					<a href="/auth/logout">로그아웃 |</a>
