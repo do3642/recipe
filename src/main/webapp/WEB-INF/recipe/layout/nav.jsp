@@ -12,7 +12,7 @@
 	<nav>
 		<div class="logo">
 			<a href="/"><img src="/img/logo.png" alt=""></a>
-			<h1>요리연구소</h1>
+			<h1><a href="/">요리연구소</a></h1>
 		</div>
 		<c:if test="${sessionScope.principal == null }">
 			<div class="account">
