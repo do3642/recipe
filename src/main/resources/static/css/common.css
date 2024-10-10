@@ -4,6 +4,9 @@ html,body{
 ul,li{
   list-style-type: none;
 }
+button{
+	cursor:pointer
+}
 a{
   text-decoration: none;
 }

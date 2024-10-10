@@ -56,6 +56,7 @@ public class UserService {
 	}
 	
 	
+	//내정보 업데이트
 	public void updateUser(Client client,HttpSession session) {
 		Client existingUser = userRepository.findByUsername(client.getUsername());
 		System.out.println(client);
@@ -66,11 +67,18 @@ public class UserService {
 		existingUser.setAddress(client.getAddress());
 		session.setAttribute("principal", existingUser);
 		
-		
-		
 		userRepository.save(existingUser);
 		
 		
 	}
+	
+	//회원탈퇴
+	public void deleteUser(int id) {
+		//Client client = userRepository.findById(id).get();
+		//System.out.println(client);
+		userRepository.deleteById(id);
+		
+	}
+	
 	
 }

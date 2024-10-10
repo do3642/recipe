@@ -19,6 +19,28 @@ const userObject = {
 			e.preventDefault();
 			this.updateUser();
 		});
+		
+		//--------------------------------------------
+		//
+		$(".delete-btn").on("click",(e)=>{
+					e.preventDefault();
+					$(".delete-box").slideDown();
+					$(".none-click").addClass("active");
+				});
+				
+				//아니요 클릭 시 비활성화
+				$(".delete-button button").eq(1).on("click",(e)=>{
+					e.preventDefault();
+					$(".delete-box").slideUp();
+					$(".none-click").removeClass("active");
+				});
+				
+				//예 클릭시 서버에 삭제요청
+				$(".delete-button button").eq(0).on("click",(e)=>{
+					e.preventDefault();
+					this.deleteUser();
+					
+				});
 
 		
 	},
@@ -38,12 +60,27 @@ const userObject = {
 					contentType: "application/json; charset=utf-8"
 					}).done(function(response){ // 실행성공 했을 때 
 							alert(response.data);
-							console.log('aa')
 							if(response.status == 200) //중복으로 실패해도 메인페이지로 가서 막아줌
 								location.href = "/"; //성공 후 메인페이지로
 							}).fail(function(error){
 								console.log(error);
 							});
+	},
+	deleteUser: ()=>{
+		
+		let id =$("#id").attr('data-id');
+		
+		$.ajax({
+				type: "DELETE",
+				url: "/auth/delete?id="+id
+				
+				}).done(function(response){ // 실행성공 했을 때 
+					alert(response.data);
+					if(response.status == 200) //중복으로 실패해도 메인페이지로 가서 막아줌
+						location.href = "/"; //성공 후 메인페이지로
+					}).fail(function(error){
+						console.log(error);
+						});		
 	}
 
 }

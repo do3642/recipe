@@ -11,7 +11,7 @@
 		<article>
 			<form>
 				<label for="id">아이디</label><br>
-				<input id="id"type="text" name="username" value="${sessionScope.principal.username}"disabled><br>
+				<input id="id"type="text" name="username" value="${sessionScope.principal.username}" data-id="${sessionScope.principal.id}" disabled><br>
 				<label for="pw">비밀번호</label><br>
 				<input id="pw"type="password" name="password" value="${sessionScope.principal.password}"><br>
 				<label for="nickname">닉네임</label><br>
@@ -24,10 +24,18 @@
 				<input id="address" type="text" name="address" value="${sessionScope.principal.address}"><br>
 				<p class="point"><span>포인트</span><span>1000 p</span></p>
 				<button class="change-btn">내정보 수정</button>
+				<button class="delete-btn">회원탈퇴</button>
+				
 			</form>
 			<div class="alert-box">
 				<p>정말 수정하시겠습니까?</p>
 				<div class="alert-button">
+					<button>네</button><button>아니요</button>
+				</div>
+			</div>
+			<div class="delete-box">
+				<p>정말 삭제하시겠습니까?</p>
+				<div class="delete-button">
 					<button>네</button><button>아니요</button>
 				</div>
 			</div>

@@ -27,27 +27,48 @@ form input:focus{
 	border-color: olive;
 }
 
-form button{
+form .change-btn{
 	margin-top:30px;
 	width:100%;
 	padding: 15px 0;
-	border: none;
+	border:3px solid rgb(218, 206, 50);
 	background-color:khaki;
 	font-weight: bold;
 	color:#333;
+	transition: .5s;
 }
 
-form button:hover{
-	background-color:rgb(218, 206, 97);
-	cursor:pointer;
+
+form .change-btn:hover{
+	background-color:#fff;
 	color:#000;
 }
-
-.alert-box{
-	display:none;
+form .delete-btn{
+	margin-top:30px;
+	width:100%;
+	padding: 10px 0;
+	border:3px solid rgb(241, 50, 36);
+	border-radius:5px;
+	background-color:rgb(241, 50, 36);
+	color:#fff;
+	font-weight: bold;
+	
+	transition: .5s;
 	
 }
-.alert-box{
+
+form .delete-btn:hover{
+	background-color:#fff;
+	color:#333;
+}
+
+
+
+
+.alert-box,.delete-box{
+	display:none;	
+}
+.alert-box,.delete-box{
 	text-align:center;
 	background-color:khaki;
 	padding:15px;
@@ -57,25 +78,32 @@ form button:hover{
 	z-index:99;
 	
 }
+.delete-box{
+	background-color: rgb(241, 50, 36);
+	color:#fff;
+}
 
 
-.alert-button{
+.alert-button,.delete-button{
 	display:flex;
 	justify-content: center;
 	align-items: center;
 	
 }
-.alert-button button{
+.alert-button button,.delete-button button{
 	width:100px;
 	margin: 5px;
 	border:none;
 	padding:5px;
 	background-color: #fff;
-	cursor:pointer;
+	
 }
 .alert-button button:hover{
 	background-color:orange;
 	color:#fff;
+}
+.delete-button button:hover{
+	background-color:#ddd;
 }
 
 
