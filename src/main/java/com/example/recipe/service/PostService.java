@@ -1,6 +1,6 @@
 package com.example.recipe.service;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -31,5 +31,16 @@ public class PostService {
 			return postRepository.findAll(pageable);
 		}
 	
+	//게시물 주소(id)를 받아와서 DB에 해당하는 게시물데이터 꺼내와서 리턴
+	public Post getPost(int id) {
+		Optional<Post> data = postRepository.findById(id);
+		
+		if(data.isPresent()) {
+			return data.get();
+		} else {
+			return null;
+		}
+		
+	}
 	
 }

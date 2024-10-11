@@ -23,7 +23,7 @@
 		      			</figcaption>
 		      		</figure>
 	             	<div class="more-btn">
-	             		<a href="#">상세보기</a>
+	             		<a href="/post/${post.id}">상세보기</a>
 	             	</div>
 	            	
       		 </div>
