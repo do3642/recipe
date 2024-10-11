@@ -36,6 +36,9 @@ dependencies {
 	implementation group: 'javax.servlet', name: 'jstl'
 	// https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper
 	implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper'
+	// https://mvnrepository.com/artifact/org.webjars.bower/summernote
+implementation group: 'org.webjars.bower', name: 'summernote', version: '0.8.20'
+	
 }
 
 tasks.named('test') {

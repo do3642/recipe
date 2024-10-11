@@ -28,6 +28,10 @@ public class Post {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@Lob
+	@Column
+	private String imgUrl;
+	
 	@Column(nullable = false, length = 100)
 	private String title;
 	

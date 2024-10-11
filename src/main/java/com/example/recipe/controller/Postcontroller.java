@@ -9,7 +9,7 @@ public class Postcontroller {
 	
 	@GetMapping("/post")
 	public String postPage() {
-		return "/post/post";
+		return "/post/insertpost";
 	}
 	
 	
