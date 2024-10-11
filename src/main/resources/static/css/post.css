@@ -3,6 +3,40 @@
 
 section .items-board{
 	display: grid;
-	grid-template-columns: repeat(5,minmax(100px, 1fr));
-	 grid-auto-rows: 300px;
+	grid-template-columns: repeat(5,minmax(250px, 1fr));
+	grid-auto-rows: 275px;
 }
+
+.card{
+	text-align:center;
+	margin:10px;
+}
+
+.card figure div{
+	width:100%;
+	height:150px;
+	border: 1px solid #333;
+	margin:auto;
+	
+}
+.card figure div img{
+	width:100%;
+	height:100%;
+}
+
+.card figure figcaption{
+	margin:10px 0;
+}
+.card figure figcaption h4{
+	font-size: 1.5em;
+}
+
+.more-btn a{
+	background-color:#EBC680;
+	width:100%;
+	padding: 15px 0;
+	border-radius:20px;
+	color:#fff;
+	font-weight: bold;
+}
+

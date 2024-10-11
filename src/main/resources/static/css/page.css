@@ -5,12 +5,21 @@
 .page-btn-box ul{
 	display:flex;
 	justify-content:center;
+	margin-top:30px;
 }
 
 .page-btn-box ul li{
-	margin: 0 10px;
+	margin: 0 5px;
 }
 .page-btn-box ul li a{
-	padding: 10px;	
+	padding: 5px 10px;	
+	border-radius:10px;
+	transition:.5s;
+}
+.page-btn-box ul li a:hover{
+	background-color:#eee;	
+}
+.page-btn-box ul li a.active{
+	background-color:rgba(214, 203, 211, .5)
 }
 

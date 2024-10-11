@@ -11,13 +11,21 @@
 
 	<section>
 		<article class="items-board">
-			 <c:if test="${empty postList}"> <!-- null이랑 같냐 조건식과 같음  -->
+			 <c:if test="${empty postList}"> 
 			 	<h1>등록된 게시물이 없습니다.</h1>	 
 		 	</c:if>
-	 		<c:forEach var ="post" items="${postList.content}"><!--var는 작명의 영역/변수명임 -->
+	 		<c:forEach var ="post" items="${postList.content}">
 		      <div class="card">
-	             	<h4 class="card-title">${post.title}</h4>
-	            	<a href="#" class="btn btn-secondary">상세보기</a>
+		      		<figure>
+		      			<div><img src=""></div>
+		      			<figcaption>
+		      			<h4 class="card-title">${post.title}</h4>
+		      			</figcaption>
+		      		</figure>
+	             	<div class="more-btn">
+	             		<a href="#">상세보기</a>
+	             	</div>
+	            	
       		 </div>
       		</c:forEach>
 		</article>
@@ -25,11 +33,9 @@
 		<article class="page-btn-box">
 			<ul>
 				<li><a href="">이전</a></li>
-				<li><a href="">1</a></li>
-				<li><a href="">2</a></li>
-				<li><a href="">3</a></li>
-				<li><a href="">4</a></li>
-				<li><a href="">5</a></li>
+				<c:forEach var="i" begin="${pageDTO.startPage}" end="${pageDTO.endPage}">
+					<li><a class="${i == pageDTO.page.number+1 ? 'active':''}" href="?page=${i-1}">${i}</a></li>
+				</c:forEach>
 				<li><a href="">다음</a></li>
 			</ul>
 		</article>

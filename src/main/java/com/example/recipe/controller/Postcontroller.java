@@ -18,8 +18,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.recipe.domain.Client;
+import com.example.recipe.domain.PageDTO;
 import com.example.recipe.domain.Post;
 import com.example.recipe.domain.ResponseDTO;
+import com.example.recipe.repository.PostRepository;
 import com.example.recipe.service.PostService;
 
 @Controller
@@ -27,6 +29,8 @@ public class Postcontroller {
 	
 	@Autowired
 	private PostService postService;
+	@Autowired
+	private PostRepository postRepository;
 	
 	@GetMapping("/post")
 	public String postPage() {
@@ -45,12 +49,13 @@ public class Postcontroller {
 	
 	
 	@GetMapping({"","/"}) 
-	public String getPostList(Model model, @PageableDefault(size=10,sort="id",direction = Direction.DESC) Pageable pageable) {
+	public String getPostList(Model model, @PageableDefault(size=15,sort="id",direction = Direction.DESC) Pageable pageable) {
 		
 		Page<Post> postList = postService.getPostList(pageable);
 		
 		// html로 데이터를 보내기 위한 모델객체
 		model.addAttribute("postList", postList);
+		model.addAttribute("pageDTO", new PageDTO(postList));
 		
 		return "index";
 	}
