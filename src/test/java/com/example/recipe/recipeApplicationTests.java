@@ -22,7 +22,7 @@ class recipeApplicationTests {
 		
 		Client client = userRepository.findById(5).get();
 		
-		for(int i=30; i<=60; i++) {
+		for(int i=61; i<=120; i++) {
 			
 		
 		Post post = new Post();

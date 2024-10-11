@@ -10,6 +10,7 @@
 
 .page-btn-box ul li{
 	margin: 0 5px;
+	border-radius:10px;
 }
 .page-btn-box ul li a{
 	padding: 5px 10px;	
@@ -22,4 +23,8 @@
 .page-btn-box ul li a.active{
 	background-color:rgba(214, 203, 211, .5)
 }
-
+.page-btn-box ul li.disabled {
+	pointer-events: none;
+    background-color: #eee;
+    opacity: .5;
+}

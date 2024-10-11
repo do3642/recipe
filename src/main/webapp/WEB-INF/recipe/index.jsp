@@ -32,11 +32,17 @@
 		
 		<article class="page-btn-box">
 			<ul>
-				<li><a href="">이전</a></li>
+				<li class="${pageDTO.prev ? '' : 'disabled' }">
+					<a href="?page=${pageDTO.startPage - 2}">이전</a>
+				</li>
+				
 				<c:forEach var="i" begin="${pageDTO.startPage}" end="${pageDTO.endPage}">
 					<li><a class="${i == pageDTO.page.number+1 ? 'active':''}" href="?page=${i-1}">${i}</a></li>
 				</c:forEach>
-				<li><a href="">다음</a></li>
+				
+				<li class="${pageDTO.next ? '' : 'disabled'}">
+					<a href="?page=${pageDTO.endPage}">다음</a>
+				</li>
 			</ul>
 		</article>
 		
