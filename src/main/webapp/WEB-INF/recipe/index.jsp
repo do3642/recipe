@@ -13,7 +13,7 @@
 			 <c:if test="${empty postList}"> <!-- null이랑 같냐 조건식과 같음  -->
 			 	<h1>등록된 게시물이 없습니다.</h1>	 
 		 	</c:if>
-	 		<c:forEach var ="post" items="${postList}"><!--var는 작명의 영역/변수명임 -->
+	 		<c:forEach var ="post" items="${postList.content}"><!--var는 작명의 영역/변수명임 -->
 		      <div class="card">
 	             	<h4 class="card-title">${post.title}</h4>
 	            	<a href="#" class="btn btn-secondary">상세보기</a>

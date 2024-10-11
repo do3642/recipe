@@ -3,6 +3,8 @@ package com.example.recipe.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,8 +27,8 @@ public class PostService {
 	
 	// 게시물DB 리스트 형태로 전체 리턴
 	@Transactional(readOnly = true)
-	public List<Post> getPostList(){
-			return postRepository.findAll();
+	public Page<Post> getPostList(Pageable pageable){
+			return postRepository.findAll(pageable);
 		}
 	
 	
