@@ -92,6 +92,21 @@ body > main > header > nav > a:nth-of-type(1){
 .user-interface a{
 	font-size:1em;
 	margin: 5px;
+	position:relative;
+	
+}
+.user-interface a::after{
+	content:'';
+	position:absolute;
+	left:0;bottom:-5px;
+	width:0;
+	height:2px;
+	background-color:#333;
+	transition:.5s;
+}
+.user-interface a:hover::after{
+	
+	width:100%;
 }
 
 
