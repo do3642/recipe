@@ -23,6 +23,10 @@
 			${post.content}
 			</p>
 		</div>
+		<c:if test="${sessionScope.principal.id == post.client.id}">
+			<input type="button" value="글 수정">
+			<input type="button" value="글 삭제">
+		</c:if>
 		</article>
 		
 		<div class="con-post"></div>
