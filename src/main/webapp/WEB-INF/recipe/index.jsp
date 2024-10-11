@@ -18,7 +18,7 @@
 	 		
 		      <div class="card">
 		      		<figure>
-		      			<div><img src="/img/${i=i+1}.jpg"></div>
+		      			<div><img src="/img/${post.id}.jpg"></div>
 		      			<figcaption>
 		      			<h4 class="card-title">${post.title}</h4>
 		      			</figcaption>
