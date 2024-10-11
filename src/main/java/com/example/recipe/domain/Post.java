@@ -30,12 +30,12 @@ public class Post {
 	
 	@Lob
 	@Column
-	private String imgUrl;
+	private String thumbnail;
 	
 	@Column(nullable = false, length = 100)
 	private String title;
 	
-	@Lob //varchar은 길이제한이 있어 대용량 내용을 넣을 수 있는 데이터타입 선언
+	@Lob
 	@Column(nullable = false)
 	private String content;
 	

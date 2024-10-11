@@ -10,14 +10,15 @@
 
 	<section>
 		<article class="items-board">
-			<div>게시판1</div>
-			<div>게시판2</div>
-			<div>게시판3</div>
-			<div>게시판4</div>
-			<div>게시판5</div>
-			<div>게시판6</div>
-			<div>게시판7</div>
-			<div>게시판8</div>
+			 <c:if test="${empty postList}"> <!-- null이랑 같냐 조건식과 같음  -->
+			 	<h1>등록된 게시물이 없습니다.</h1>	 
+		 	</c:if>
+	 		<c:forEach var ="post" items="${postList}"><!--var는 작명의 영역/변수명임 -->
+		      <div class="card">
+	             	<h4 class="card-title">${post.title}</h4>
+	            	<a href="#" class="btn btn-secondary">상세보기</a>
+      		 </div>
+      		</c:forEach>
 		</article>
 	</section>
 	
