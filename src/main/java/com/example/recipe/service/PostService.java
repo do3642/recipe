@@ -34,9 +34,12 @@ public class PostService {
 	//게시물 주소(id)를 받아와서 DB에 해당하는 게시물데이터 꺼내와서 리턴
 	public Post getPost(int id) {
 		Optional<Post> data = postRepository.findById(id);
+		Post post = data.get();
+		post.setCnt(post.getCnt()+1);
+		postRepository.save(post);
 		
 		if(data.isPresent()) {
-			return data.get();
+			return post;
 		} else {
 			return null;
 		}
