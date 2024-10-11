@@ -5,6 +5,7 @@
 <title>요리연구소</title>
 
 <link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/page.css">
 <%@ include file="./layout/nav.jsp" %>
 
 
@@ -20,6 +21,19 @@
       		 </div>
       		</c:forEach>
 		</article>
+		
+		<article class="page-btn-box">
+			<ul>
+				<li><a href="">이전</a></li>
+				<li><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+				<li><a href="">다음</a></li>
+			</ul>
+		</article>
+		
 	</section>
 	
 
