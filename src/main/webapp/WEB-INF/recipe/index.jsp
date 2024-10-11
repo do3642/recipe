@@ -15,9 +15,10 @@
 			 	<h1>등록된 게시물이 없습니다.</h1>	 
 		 	</c:if>
 	 		<c:forEach var ="post" items="${postList.content}">
+	 		
 		      <div class="card">
 		      		<figure>
-		      			<div><img src=""></div>
+		      			<div><img src="/img/${i=i+1}.jpg"></div>
 		      			<figcaption>
 		      			<h4 class="card-title">${post.title}</h4>
 		      			</figcaption>
