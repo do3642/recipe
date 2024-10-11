@@ -27,18 +27,21 @@ import com.example.recipe.repository.PostRepository;
 import com.example.recipe.service.PostService;
 
 @Controller
-public class Postcontroller {
+public class PostController {
 	
 	@Autowired
 	private PostService postService;
 	@Autowired
 	private PostRepository postRepository;
 	
+	
+	//게시글 작성 네비 클릭시 작성 페이지 이동
 	@GetMapping("/post")
 	public String postPage() {
 		return "/post/insertpost";
 	}
 	
+	//게시글 등록 버튼 클릭 시 세션에 있는 로그인 유저 정보를 객체로 꺼내 post(게시물DB)에 저장
 	@PostMapping("/post")
 	@ResponseBody
 	public ResponseDTO<?> insertPost(@RequestBody Post post,HttpSession session){

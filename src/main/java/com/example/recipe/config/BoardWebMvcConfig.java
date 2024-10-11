@@ -12,7 +12,7 @@ public class BoardWebMvcConfig implements WebMvcConfigurer {
 		// TODO Auto-generated method stub
 		registry.addInterceptor(new AuthInterceptor())
 		.addPathPatterns("/auth/userinfo","/post/**");
-		
+		//내정보, 게시판 접근은 로그인 해야 가능하도록
 	}
 
 }
