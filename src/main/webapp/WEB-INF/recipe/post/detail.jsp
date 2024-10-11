@@ -24,8 +24,11 @@
 			</p>
 		</div>
 		<c:if test="${sessionScope.principal.id == post.client.id}">
-			<input type="button" value="글 수정">
-			<input type="button" value="글 삭제">
+			<div class="alter-btn">
+				<a href="/post/modify/${post.id}"><input type="button" value="글 수정"></a>
+				<a href=""><input type="button" id="btn-delete" value="글 삭제"></a>
+			</div>
+			<input id="id"type="hidden" value="${post.id}">
 		</c:if>
 		</article>
 		
@@ -46,5 +49,5 @@
 		
 	</section>
 
-
+<script src="/js/postModify.js"></script>
 <%@ include file="../layout/footer.jsp" %>

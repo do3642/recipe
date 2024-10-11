@@ -25,6 +25,39 @@ section .item-header .item-box{
 section .item-header .item-box span{}
 section .item-header .content{}
 section .item-header .content p{}
+/* -----------------------------  */
+.alter-btn{
+	width:300px;
+	margin:50px auto 30px auto;
+	text-align:center;
+}
+.alter-btn a input{
+	border:none;
+	border-radius:10px;
+	padding:10px 20px;
+	margin: 0 5px;
+	cursor:pointer;
+	transition:.5s;
+	background: #fff;
+	font-weight:bold;
+	
+}
+.alter-btn a:first-child input{
+	border:2px solid blue;
+}
+.alter-btn a:last-child input{
+	border:2px solid red;
+}
+.alter-btn a:first-child:hover input{
+	background-color:blue;
+	color:#fff
+}
+.alter-btn a:last-child:hover input{
+	background-color:red;
+	color:#fff
+}
+
+
 
 
 /* -----------------------------  */

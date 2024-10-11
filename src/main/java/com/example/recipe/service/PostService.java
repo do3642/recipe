@@ -46,4 +46,19 @@ public class PostService {
 		
 	}
 	
+	//게시물 수정
+	public void updatePost(Post post) {
+		
+		Post findPost = postRepository.findById(post.getId()).get();
+		findPost.setTitle(post.getTitle());
+		findPost.setContent(post.getContent());
+		postRepository.save(findPost);
+		
+	}
+	
+	//게시물 삭제
+	public void deletePost(int id) {
+		postRepository.deleteById(id);
+	}
+	
 }

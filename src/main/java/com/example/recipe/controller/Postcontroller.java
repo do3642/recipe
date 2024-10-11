@@ -11,9 +11,11 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -62,12 +64,41 @@ public class Postcontroller {
 	
 	
 	@GetMapping("/post/{id}")
-	public String getPost(@PathVariable int id, Model model) {
+	public String getPost(@PathVariable Integer id, Model model) {
 		
 		Post post = postService.getPost(id);
 		model.addAttribute("post",post);
 		
 		return  "/post/detail";
+	}
+	
+	
+	@GetMapping("/post/modify/{id}")
+	public String modify(@PathVariable Integer id, Model model) {
+		Post post = postService.getPost(id);
+		model.addAttribute("post",post);
+		return "post/modify";
+	}
+	
+	
+	@PutMapping("/post")
+	@ResponseBody
+	public ResponseDTO<?> modify(@RequestBody Post post){
+			postService.updatePost(post);
+
+			return new ResponseDTO<>(HttpStatus.OK.value(), post.getId() + "번 게시물 수정 완료");
+			
+		}
+	
+	@DeleteMapping("/post/{id}")
+	@ResponseBody
+	public ResponseDTO<?> deletePost(@PathVariable int id){
+		
+		
+		postService.deletePost(id);
+		
+		return new ResponseDTO<>(HttpStatus.OK.value(), "삭제완료");
+		
 	}
 	
 	
