@@ -44,6 +44,8 @@ public class Post {
 	
 	private int cnt;
 	
+	private String category;
+	
 	// 엔티티는 user의 id만 가져오기 번거로우니
 	// 객체 형태로 가져온다, 관계는 설정해야함 1:N상태이니 ManyToOne
 	@ManyToOne(fetch = FetchType.EAGER)

@@ -54,7 +54,7 @@ public class PostController {
 	
 	
 	@GetMapping({"","/"}) 
-	public String getPostList(Model model, @PageableDefault(size=15,sort="id",direction = Direction.DESC) Pageable pageable) {
+	public String getPostList(Model model, @PageableDefault(size=6,sort="id",direction = Direction.DESC) Pageable pageable) {
 		
 		Page<Post> postList = postService.getPostList(pageable);
 		

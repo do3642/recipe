@@ -16,6 +16,7 @@ const postObject = {
 		
 		let post = {
 			thumbnail: $("#thumbnail").val(),
+			category: $("#category").val(),
 			title: $("#title").val(),
 			content: $("#content").val()
 		}

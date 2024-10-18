@@ -25,11 +25,19 @@
 				    <div>
 						<label for=thumbnail class="form-label">썸네일</label><br>
 				       <input type="file" class="form-control" id="thumbnail" placeholder="Enter title" name="thumbnail"><br>
-				       <label for="title" class="form-label">Title</label><br>
-				       <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
+				       <label for=category class="form-label">카테고리</label><br>
+				       <select name="category" id="category">
+							<option value="자유">자유</option>
+							<option value="한식">한식</option>
+							<option value="중식">중식</option>
+							<option value="양식">양식</option>
+							<option value="일식">일식</option>
+						</select><br>	
+				       <label for="title" class="form-label">레시피이름</label><br>
+				       <input type="text" class="form-control" id="title" placeholder="제목 입력" name="title">
 				    </div>
 				    <div>
-				       <label for="content" class="form-label">Content:</label><br>
+				       <label for="content" class="form-label">설명</label><br>
 				       <textarea class="form-control" id="content" rows="10" cols="50"></textarea>
 				    </div>
 				     <button id="btn-insert" type="submit" class="btn btn-primary">게시물 등록</button>
